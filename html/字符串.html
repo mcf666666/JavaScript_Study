@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'; //开启严格模式
+
+        // 1.如果字符串内包含一些特殊符号，怎么办？  使用转义字符 \
+        var str = " hello \" world \" ";
+
+        //  浏览器输出结果：hello " world " 
+
+
+        // 2.多行字符串
+        var str1 = `第一行
+                    第二行
+                    第三行`;
+
+        // 3.模板字符串
+        var name = "小明";
+        var age = 18 ;
+        var message = `My name is ${name} and age is ${age} `;
+
+        // 4.常见的字符串函数
+
+        // (1.)长度函数
+        var str2 = "123456789";
+        console.log(str2.length);
+
+        // (2.)获取字符串某个位置的字符
+        console.log(str2[0]);
+        console.log(str2[1]);
+
+        /**********************
+         * 特别注意,字符串是不可变的,如果对字符串的某个索引赋值,会报错
+         **********************/
+
+        str2[0] = 2;
+        console.log(str2);   
+
+
+        // (3.) 其他函数和java大同小异,用到的时候可以百度
+
+        
+
+        
+    </script>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对象</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        // 1.定义一个对象
+        var myFirstObject = {
+           name : 'Mary',
+           age : 18
+        }
+        // console.log(myFirstObject);
+
+
+        // 2.动态的添加或删除属性
+        var xiaoMing = {
+            name : "xiaoMing"
+        }
+        // console.log(xiaoMing);
+
+        // 动态的新增属性
+        xiaoMing.age = 18;
+        // console.log(xiaoMing);
+
+        // 动态的删除属性
+        delete xiaoMing.name;
+        // console.log(xiaoMing);
+
+
+        // 3.检查对象是否有某属性
+        // console.log('name' in xiaoMing); //false
+        // console.log('age' in xiaoMing); // ture
+
+        // in 会认为继承得来的属性也是该对象的属性，
+        // 要判断一个属性不是继承得到的，可以用 hasOwnProperty() 方法：
+        // console.log('toString' in xiaoMing); //true
+        // console.log(xiaoMing.hasOwnProperty('toString')); //false
+
+
+        // 4.在对象中定义方法
+        var xiaohong = {
+            name : 'xiaohong',
+            age : 18,
+            1.52 : 111,
+            say : function(){
+                console.log('My Name is'+this.name);
+            }
+        }
+
+        console.log(xiaohong);
+        console.log(xiaohong.say);
+        xiaohong.say();
+
+        
+    </script>
+</body>
+</html>
